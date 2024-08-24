@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html{
+overflow-x: hidden;
+}
+
+body {
+  background: #111;
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background-size:cover ;
+    
+    background-blend-mode:inherit;
+      display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #161616;
+  overflow: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #111;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #111;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:#222;
+  border-radius: 5px;
+}
+
+
+
+.crud {
+  background-color: rgba(34, 34, 34, 0.6);
+
+   margin: 100px;
+  padding: 15px 70px;
+  border: none;
+  outline: none;
+  color: #FFF;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+  
+}
+.crud:after{
+    margin: auto;
+     content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  
+}
+.crud:before{
+    margin: auto;
+     content: "";
+  background: linear-gradient(
+    45deg,
+    #b300ff, #e600ff, #ff00d4, #9900ff,
+    #00eaff, #1500ff, #0080ff, #c300ff
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height:  calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  
+  border-radius: 10px;
+}
+
+.head {
+    width: auto;
+   text-align: center;
+  text-transform: uppercase;
+  margin: 10px;
+   
+}
+
+  
+
+input{
+  width: 100%;
+  height: 30px;
+  outline: none;
+  background: #111;
+  border: none;
+  margin: 4px 0;
+  border-radius: 4px;
+  padding: 10px;
+  color: white;
+  transition: 0.4s ;
+position: relative;
+z-index: 99999;
+}
+input[type="button"]{
+    border-radius: 15px;
+}
+
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    cursor:pointer;
+    display:block;
+    width:8px; 
+    /* to cancel the spinner */
+    color: #333;
+    text-align:center;
+    
+   
+}    
+/* input[type=number]:hover::-webkit-inner-spin-button { 
+    width: 14px;
+    height: 14px;
+    padding: 4px;              " if i need to style a spinner  "
+    position: relative;
+    right: 4px;
+    border-radius: 28px;
+} */
+
+input:focus{  /* onclick input*/
+    background: black;
+    transform: scale(1.1);
+    transition: 0.3s ;  
+    z-index:999999;  
+}
+
+.total-price input{
+    width: 18%;
+}
+
+#total{
+  padding: 10px;
+  background:rgb(66, 102, 220);
+    border-radius: 4px;
+    
+    
+}
+
+#total::before{
+    content: "Total : ";
+}
+
+button{
+    width:100%;
+    height:50px;
+    border-radius: 25px;
+    outline: none;  /* outline,border=none to remove any surrounding lines*/
+    border: none;
+    cursor: pointer;
+    color:white;
+    transition: 0.5s;
+    z-index: 0;
+    position: relative;
+    margin: 5px;
+ 
+}
+
+button::after {
+  content: "";
+  z-index: -1;
+  
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  left: 0;
+  top: 0;
+  border-radius: 25px;
+  
+}
+/* glow */
+button::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #b300ff, #e600ff, #ff00d4, #9900ff,
+    #01b3c3, #1500ff, #0080ff, #c300ff
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height:  calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  
+  border-radius: 25px;
+  
+}
+button:hover{
+  transform: scale(1.1);
+    transition: 0.3s ;  
+    z-index: 99999;
+}
+
+#deleteAll{
+  margin: 20px 0;
+}
+
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
+}
+
+/* hover */
+button:hover::before {
+  opacity: 1;
+}
+
+button:active:after {
+  background: transparent;
+}
+
+button:active {
+  color: #333;
+  font-weight: bold;
+}
+.searchBtns{
+    display: flex; 
+    justify-content: space-between;
+
+}
+.searchBtns button{
+    width: 49%;
+}
+table{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+table th {
+    text-transform: uppercase;
+}
+th,td{
+    padding: 5px;
+}
+
+.del{
+  margin-top: 10px;
+}

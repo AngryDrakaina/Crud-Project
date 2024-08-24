@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cruds - Product Management System</title>
+    <meta name="description" content="Product Management System built with Html5 , Css3 and JavaScript">
+  </head>
+  <body>
+    <div class="crud">
+
+
+      <!-- header -->
+      <div class="head">
+            
+            <h1>Product Management System</h1>
+      </div>
+
+      <!-- ------- end header-------- -->
+
+
+
+
+       <!-- Inputs -->
+      <div class="inputs">
+            <input type="text" id="title" placeholder="Title">
+            <div class="total-price price">
+                <input oninput="getTotalPrice()" type="number" id="price" placeholder="Price">
+                <input oninput="getTotalPrice()" type="number" id="taxes" placeholder="Taxes">
+                <input oninput="getTotalPrice()" type="number" id="advers" placeholder="Ads">
+                <input oninput="getTotalPrice()" type="number" id="discount" placeholder="Discount">
+                              <!-- oninput=onkeyup: when i write the input, it automatically runs the function -->
+
+                <small id="total"></small>
+            </div>
+            <input type="number" id="count" placeholder="Count">
+            <input type="text" id="category" placeholder="Category">
+            <button onclick=submit(count.value) id="create" value="Create">Create</button>
+      </div>
+     <!-- ---  end inputs ----- -->
+
+
+
+
+      <!-- Outputs -->
+
+    <div class="outputs">
+        <input type="text" oninput="searchName()" id="search" placeholder="Search by title">
+
+
+
+
+         <!-- Search Buttons -->
+
+        <div class="searchBtns">
+            <button id="sTitle" onclick="searchName('title')" value="Search By Title">Search By Title</button>
+            <button id="sCategory" onclick="searchName('category')" value="Search By Category">Search By Category</button>
+
+        </div>
+        <!-- ------ end search buttons-------- -->
+
+
+
+
+
+             <!-- the button that appears when there r products -->
+            <button id="deleteAll" onclick="deleteAll()" value="Delete All">Delete All</button>
+        <!-- table -->
+        <div class="data">
+            <table id="table">
+                <thead>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Taxes</th>
+                    <th>Ads</th>
+                    <th>Discount</th>
+                    <th>Total</th>
+                    <th>Category</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+          </div>
+          <!-- end table -->
+    </div>
+    <!-- ------------ end output-------------- -->
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
